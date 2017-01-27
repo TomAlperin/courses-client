@@ -1,0 +1,17 @@
+node_modules
+npm-debug.log
+
+# Ignore the configuration files
+config/db.json
+config/dev.json
+.env
+
+*.sql
+
+# Ignore all the build directories
+/build
+/public
+/node_modules
+.idea
+.vscode
+.DS_Store

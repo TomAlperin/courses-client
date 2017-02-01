@@ -1,0 +1,35 @@
+a {
+    color: #333;
+    display:block;
+    padding: 8px 15px;
+}
+a:hover, a:focus {
+    text-decoration:none;
+}
+.courses-nav {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background: lightgrey;
+    top: 0;
+    right: 0;
+    padding: 44px 0 10px 0;
+    z-index: 100;
+}
+.courses-nav ul {
+    list-style: none;
+    padding: 0;
+}
+.menu-item {
+    font-size: 20px;
+    line-height: 20px;
+}
+.divider {
+    background:#999;
+    height:1px;
+    margin: 0 15px;
+}
+h4 {
+    padding: 0 15px;
+    margin: 0;
+}

@@ -1,0 +1,42 @@
+<div
+    *ngIf="editModalService.mask"
+    [ngClass]="{'open-mask':editModalService.open}"
+    class="edit-user-mask"
+    (click)="cancel();hideEditModal()"
+>
+</div>
+<div class="edit-modal-container" [ngClass]="{open:editModalService.open}">
+    <div class="edit-modal">
+        <h3>Edit {{model}}</h3>
+        <div class="form-group col-xs-12 col-sm-6" [ngClass]="{'form-group':input.type != 'checkbox', 'checkbox': input.type == 'checkbox' }" *ngFor="let input of inputs">
+            
+            
+            <button
+                *ngIf="input.type == 'checkbox'"
+                (click)="record[input.key] = !record[input.key]"
+                class="btn btn-default btn-sm btn-modal"
+                [ngClass]="{selected: record[input.key]}"
+            >
+                <i *ngIf="record[input.key]" class="fa fa-check fa-fw" aria-hidden="true"></i>{{input.label}}
+            </button>
+            
+            <div *ngIf="input.type != 'checkbox'" >
+                <label >{{input.label}}</label>
+                <input [(ngModel)]="record[input.key]" class="form-control" [type]="input.type" [name]="input.key">
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <hr/>
+            <div class="pull-right">
+                <button
+                    class="btn btn-primary btn-sm"
+                    (click)="hideEditModal()"
+                >Save {{model}}</button>
+                <button
+                    class="btn btn-default btn-sm"
+                    (click)="cancel();hideEditModal()"
+                >Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

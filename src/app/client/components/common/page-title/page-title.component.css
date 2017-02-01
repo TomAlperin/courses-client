@@ -1,0 +1,26 @@
+.navbar {
+    min-height: 20px;
+    border-radius: 0;
+    position:absolute;
+    width: 100%;
+    top:0;
+    left:0;
+}
+.navbar-brand {
+    padding: 5px 15px;
+    height: auto;
+    color: #fff;
+}
+.navbar-form {
+    margin: 3px 0;
+    padding-right:0;
+}
+.form-control {
+    height: 24px;
+    padding: 3px 12px;
+}
+.navbar-toggle {
+    margin: 3px 10px 3px 3px;
+    padding: 3px 5px;
+    color: #fff;
+}

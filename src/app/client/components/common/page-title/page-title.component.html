@@ -1,0 +1,22 @@
+<nav class="navbar navbar-inverse" (window:resize)="toggle(false)">
+    <div class="navbar-header">
+        <button
+            (click)="toggle(true)"
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+        >
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fa fa-search-plus" aria-hidden="true"></i>
+        </button>
+        <a class="navbar-brand" href="#">{{title}}</a>
+    </div>
+
+    <div class="collapse navbar-collapse" [ngClass]="{in:open}">
+        <form *ngIf="search" class="navbar-form navbar-right" (submit)="open = !open">
+        <div class="form-group">
+            <input #search_input (keyup)="search(search_input.value)" type="text" class="form-control" placeholder="Search">
+        </div>
+        </form>
+    </div><!-- /.navbar-collapse -->
+</nav>

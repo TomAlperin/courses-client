@@ -1,0 +1,9 @@
+<div class="toast-container">
+    <alert
+        *ngFor="let toast of toasts; let i = index"
+        [dismissOnTimeout]="toast.timeout"
+        [type]="toast.type"
+        dismissible="true"
+        (close)="closeToast(i)"
+    ><i [class]="toastIcon(toast.type)" aria-hidden="true"></i> {{toast.message}}</alert>
+</div>

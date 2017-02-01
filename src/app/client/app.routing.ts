@@ -1,20 +1,31 @@
-import { ModuleWithProviders } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { ModuleWithProviders }    from '@angular/core';
+import { Routes, RouterModule }   from '@angular/router';
 
-import { HomeComponent } from './components/home/home.component';
-import { ProfileComponent } from './components/profile/profile.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LoginComponent }         from './components/login/login.component';
+import { HomeComponent }          from './components/home/home.component';
+import { ProfileComponent }       from './components/profile/profile.component';
+import { DashboardComponent }     from './components/dashboard/dashboard.component';
+
+// user components
+import { UsersComponent }         from './components/users/users.component';
+import { UserComponent }          from './components/users/user/user.component';
+
+// courses components
+import { CoursesComponent }       from './components/courses/courses.component';
+import { CourseEditComponent }    from './components/courses/course-edit/course-edit.component';
+
 const appRoutes: Routes = [
   {
     path: 'login',
-    component: ProfileComponent
+    component: LoginComponent
   },
   {
     path: '',
-    component: HomeComponent
+    redirectTo: '/login',
+    pathMatch: 'full'
   },
   {
-    path: 'courses',
+    path: 'academy',
     component: DashboardComponent,
     children: [
       {
@@ -24,6 +35,22 @@ const appRoutes: Routes = [
       {
         path: 'profile/:id',
         component: ProfileComponent
+      },
+      {
+        path: 'users',
+        component: UsersComponent
+      },
+      {
+        path: 'users/:id',
+        component: UserComponent
+      },
+      {
+        path: 'courses',
+        component: CoursesComponent
+      },
+      {
+        path: 'course-edit/:id',
+        component: CourseEditComponent
       }
     ]
   }

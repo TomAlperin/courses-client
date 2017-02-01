@@ -1,0 +1,17 @@
+<div bsModal #confirmModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="confirmModal" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">{{confirmTitle}}</h4>
+            </div>
+            <div class="modal-body">
+                {{confirmMessage}}
+            </div>
+            <hr class="modal-divider">
+            <div class="modal-buttons">
+                <button type="button" class="btn btn-success" [style.backgroundColor]="color" (click)="doConfirm();confirmModal.hide()">{{confirmOk}}</button>
+                <button type="button" class="btn btn-danger" (click)="confirmModal.hide()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

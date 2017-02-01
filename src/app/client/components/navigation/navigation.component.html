@@ -1,0 +1,42 @@
+<nav class="courses-nav">
+    <ul (click)="close()">
+        <li class="menu-item">   
+            <a routerLink="/academy" routerLinkActive="active" class="nav-link">
+                <i class="fa fa-fw fa-home" aria-hidden="true"></i>
+                Home
+            </a>
+        </li>
+        <li role="separator" class="divider"></li>
+        <li  class="menu-item">
+            <a class="nav-link" routerLinkActive="active">
+                <i class="fa fa-fw fa-graduation-cap" aria-hidden="true"></i>
+                Classes
+            </a>
+        </li>
+        <li role="separator" class="divider"></li>
+        <li class="menu-item">
+            <a routerLink="/academy/profile/1" routerLinkActive="active" class="nav-link">
+                <i class="fa fa-fw fa-user-circle" aria-hidden="true"></i>
+                Profile
+            </a>
+        </li>
+        <li role="separator" class="divider"></li>
+    </ul>
+    <h4>Admin</h4>
+    <ul (click)="close()">
+        <li class="menu-item">   
+            <a routerLink="/academy/users" routerLinkActive="active" class="nav-link">
+                <i class="fa fa-fw fa-users" aria-hidden="true"></i>
+                Users
+            </a>
+        </li>
+        <li role="separator" class="divider"></li>
+        <li  class="menu-item">
+            <a routerLink="/academy/courses" class="nav-link" routerLinkActive="active">
+                <i class="fa fa-fw fa-file-code-o" aria-hidden="true"></i>
+                Courses
+            </a>
+        </li>
+        <li role="separator" class="divider"></li>
+    </ul>
+</nav>

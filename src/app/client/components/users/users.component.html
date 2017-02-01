@@ -1,0 +1,21 @@
+<page-title
+    title="Users"
+    [search]="getScopedUsers"
+></page-title>
+<div class="table-contain">
+    <data-table
+        [headings]="headings"
+        [tableData]="scopedUsers"
+    ></data-table>
+</div>
+<edit-modal
+    model="User"
+    [inputs]="inputs"
+></edit-modal>
+<confirm
+  #confirm
+  [confirmTitle]="'Delete ' + model"
+  confirmOk="Delete"
+  confirmMessage="Are you sure you want to delete this."
+  (onConfirm)="delete($event)"
+></confirm>
